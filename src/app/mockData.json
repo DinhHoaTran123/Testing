@@ -1,35 +1,44 @@
 {
   "categories": [
     {
-      "name": "🍎 Trái cây",
-      "items": ["Táo", "Chuối", "Cam"]
+      "name": "Loại A",
+      "tabs": [
+        {
+          "name": "Tab A1",
+          "label": "Tab A1",
+          "type": "table",
+          "data": [
+            { "name": "Nguyễn Văn A" },
+            { "name": "Trần Thị B" }
+          ],
+          "pdfUrl": "/pdfs/a1.pdf"
+        },
+        {
+          "name": "Tab A2",
+          "label": "Tab A2",
+          "type": "input",
+          "defaultInput": {
+            "name": "Lê Công Vinh",
+            "email": "lecongvinh@gmail.com",
+            "message": "aloalo"
+          },
+          "pdfUrl": "/pdfs/a2.pdf"
+        }
+      ]
     },
     {
-      "name": "🥬 Rau củ",
-      "items": ["Cà rốt", "Rau chân vịt","Thịt chó"]
+      "name": "Loại B",
+      "tabs": [
+        {
+          "name": "Tab B1",
+          "label": "Tab B1",
+          "type": "table",
+          "data": [
+            { "name": "Phạm Văn C" }
+          ],
+          "pdfUrl": "/pdfs/b1.pdf"
+        }
+      ]
     }
-  ],
-  "tabData": [
-    [
-      { "id": 1, "name": "Nguyễn Văn A" },
-      { "id": 2, "name": "Trần Thị B" }
-    ],
-    [
-      { "id": 3, "name": "Lê Văn C" },
-      { "id": 4, "name": "Phạm Thị D" }
-    ],
-    [
-      { "id": 5, "name": "Ngô Văn E" }
-    ],
-    [],
-    []
-  ],
-  "inputDefaults": [
-    { "name": "A", "email": "a@example.com", "message": "Tin nhắn 1" },
-    { "name": "B", "email": "b@example.com", "message": "Tin nhắn 2" },
-    { "name": "C", "email": "c@example.com", "message": "Tin nhắn 3" },
-    { "name": "D", "email": "d@example.com", "message": "Tin nhắn 4" },
-    { "name": "E", "email": "e@example.com", "message": "Tin nhắn 5" }
-  ],
-  "tabNames": ["Tổng quan", "Chi tiết", "Tài liệu", "Thống kê", "Cài đặt"]
+  ]
 }
