@@ -13,7 +13,7 @@ export default function PdfViewer() {
         <div className="p-4">
             <div>
                 <h1>Preview PDF</h1>
-                <iframe src="/sample.pdf" width="100%" height="600px" />
+                <iframe src="/pdfs/a1.pdf" width="100%" height="600px" />
             </div>
             <Document
                 file="/sample.pdf"
