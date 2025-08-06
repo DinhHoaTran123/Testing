@@ -31,9 +31,9 @@ const TableView = ({ tab }: TableViewProps) => {
                             </td>
                         </tr>
                     ) : (
-                        tableData.map((row) => (
-                            <tr key={row.id} className="hover:bg-gray-50 transition-all">
-                                <td className="p-4 border-b text-black">{row.id}</td>
+                        tableData.map((row, index) => (
+                            <tr  key={index} className="hover:bg-gray-50 transition-all">
+                                <td className="p-4 border-b text-black">{index + 1}</td>
                                 <td className="p-4 border-b font-medium text-gray-700">{row.name}</td>
                             </tr>
                         ))
