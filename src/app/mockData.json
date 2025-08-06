@@ -1,0 +1,23 @@
+{
+  "categories": [
+    {
+      "name": "🍎 Trái cây",
+      "items": ["Táo", "Chuối", "Cam"]
+    },
+    {
+      "name": "🥬 Rau củ",
+      "items": ["Cà rốt", "Rau chân vịt","Thịt chó"]
+    }
+  ],
+  "tableData": [
+    { "id": 1, "name": "Nguyễn Văn A" },
+    { "id": 2, "name": "Trần Thị B" },
+    { "id": 3, "name": "Lê Văn C" }
+  ],
+  "inputDefaults": {
+    "name": "Nguyễn Văn A",
+    "email": "a@example.com",
+    "message": "Tôi muốn đặt hàng sản phẩm này."
+  },
+  "tabNames": ["Tổng quan", "Chi tiết", "Tài liệu", "Thống kê", "Cài đặt"]
+}
