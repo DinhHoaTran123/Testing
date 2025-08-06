@@ -1,23 +1,48 @@
-import data from "../mockData.json";
+export interface Tab {
+    name: string;
+    type: "table" | "input";
+    data?: any[]; // Cho table
+    defaultInput?: { name: string; value: string }[]; // Cho input
+    pdfUrl?: string;
+}
 
-const CategorizedList = () => {
-    return (
-        <div className="bg-white p-6 rounded-2xl shadow-md">
-            <h2 className="text-2xl font-bold mb-4 text-gray-800">📂 Danh mục sản phẩm</h2>
-            <div className="space-y-6">
-                {data.categories.map((category) => (
-                    <div key={category.name}>
-                        <h3 className="text-lg font-semibold text-blue-700 mb-2">{category.name}</h3>
-                        <ul className="list-disc list-inside text-gray-700 space-y-1">
-                            {category.items.map((item) => (
-                                <li key={item}>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
-            </div>
-        </div>
-    );
+export interface Category {
+    name: string;
+    pdfUrl: string;
+    tabs: Tab[];
+}
+
+type Props = {
+    categories: Category[];
+    activeCategoryIndex: number;
+    onCategorySelect: (index: number) => void;
+    onTabSelect: (catIndex: number, tabIndex: number) => void;
 };
 
-export default CategorizedList;
+export default function CategorizedList({ categories, activeCategoryIndex, onCategorySelect, onTabSelect }: Props) {
+    return (
+        <div>
+            {categories.map((category, catIdx) => (
+                <div key={catIdx} className="mb-4">
+                    <div
+                        className={`cursor-pointer font-semibold text-md mb-1 ${
+                            activeCategoryIndex === catIdx ? "text-blue-700" : "text-gray-800"
+                        }`}
+                        onClick={() => onCategorySelect(catIdx)}
+                    >
+                        {category.name}
+                    </div>
+                    {category.tabs.map((tab, tabIdx) => (
+                        <div
+                            key={tabIdx}
+                            className="ml-4 cursor-pointer text-gray-700 hover:text-blue-600"
+                            onClick={() => onTabSelect(catIdx, tabIdx)}
+                        >
+                            • {tab.name}
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </div>
+    );
+}
