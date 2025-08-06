@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Document, Page, pdfjs } from "react-pdf";
 
 export default function PdfViewer() {
