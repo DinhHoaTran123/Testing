@@ -1,0 +1,35 @@
+{
+  "categories": [
+    {
+      "name": "🍎 Trái cây",
+      "items": ["Táo", "Chuối", "Cam"]
+    },
+    {
+      "name": "🥬 Rau củ",
+      "items": ["Cà rốt", "Rau chân vịt","Thịt chó"]
+    }
+  ],
+  "tabData": [
+    [
+      { "id": 1, "name": "Nguyễn Văn A" },
+      { "id": 2, "name": "Trần Thị B" }
+    ],
+    [
+      { "id": 3, "name": "Lê Văn C" },
+      { "id": 4, "name": "Phạm Thị D" }
+    ],
+    [
+      { "id": 5, "name": "Ngô Văn E" }
+    ],
+    [],
+    []
+  ],
+  "inputDefaults": [
+    { "name": "A", "email": "a@example.com", "message": "Tin nhắn 1" },
+    { "name": "B", "email": "b@example.com", "message": "Tin nhắn 2" },
+    { "name": "C", "email": "c@example.com", "message": "Tin nhắn 3" },
+    { "name": "D", "email": "d@example.com", "message": "Tin nhắn 4" },
+    { "name": "E", "email": "e@example.com", "message": "Tin nhắn 5" }
+  ],
+  "tabNames": ["Tổng quan", "Chi tiết", "Tài liệu", "Thống kê", "Cài đặt"]
+}
